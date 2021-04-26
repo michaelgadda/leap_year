@@ -10,21 +10,20 @@
 def leap_year_test():
 	year_str = input("Please enter a year greater than 0: ")
 	year = int(year_str)
-	#error handling
-	#if year <= 0:
-	#	print("Let's try again...")
-	#	return leap_year_test()
-	#else: 
-	if year % 4 == 0:
-		if year % 100 != 0: 
-			print(f"{year} is a leap year")
-		else: 
-			if year % 400 == 0: 
+	if year <= 0:
+		print("Let's try again...")
+		return leap_year_test()
+	else: 
+		if year % 4 == 0:
+			if year % 100 != 0: 
 				print(f"{year} is a leap year")
-			else:
-				print(f"{year} is not a leap year")
-	else: 			
-		print(f"{year} is not a leap year")
+			else: 
+				if year % 400 == 0: 
+					print(f"{year} is a leap year")
+				else:
+					print(f"{year} is not a leap year")
+		else: 			
+			print(f"{year} is not a leap year")
 
 		
 
